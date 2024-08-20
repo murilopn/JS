@@ -1,0 +1,1 @@
+OBS: nodeList NÃO é um array!!! ele se comporta de forma muito similar, podemos utilizar vários comandos de array em cima dele, mas não é array, a nodeList é parte do DOM, da API do Browser, não é nativo do js   

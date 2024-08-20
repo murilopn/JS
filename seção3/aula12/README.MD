@@ -1,0 +1,1 @@
+Assim como no python, no js eu posso dar for in

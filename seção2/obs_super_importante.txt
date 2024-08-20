@@ -1,0 +1,18 @@
+const, var e let não são tipos, elas são classificadas como palavras-chave (keywords) e elas permitem, por exemplo, a alteração ou não do
+valor atribuído a uma variável ao longo do código e também podem definir o escopo da variável.
+
+OBS:
+Em js, a keyword 'const' proibi a alteração da referência da variável, ou seja, ela sempre apontará para o mesmo endereço de memória. Um detalhe é que o 
+sinal de atribuição (=) implica em uma nova referência, ou seja, a variável passa a apontar para um novo endereço de memória, por isso variáveis imutáveis 
+não podem ter seu valor alterado por const, uma vez que a única forma de alterá-las é a partir de copia, o que implica na necessidade de um sinal de 
+atribuição. As variáveis mutáveis (array e objetos) podem ter seus valores alterados, mas não elas em si, uma vez que elas apontaram para o mesmo endereço
+de memória. Um detalhe é que essa troca é realizada a partir de métodos (funções) e não por atribuição, ex:
+
+const obj1 = { name: "Alice" };
+obj1.name = "Bob"; estou indo até o objeto "obj1" e alterando o atributo "name", não há alteração na referência do objeto e sim no valor de um dos atributos. 
+console.log(obj1.name); Vai printar "Bob"
+
+obj1 = { name: "Charlie" }; Vai dar erro, pois implica na alteração da referência.
+
+
+Atenção: O termo INSTANCIAR significa exatamente isso, o objeto é uma instância , é gerado/criado, da classe

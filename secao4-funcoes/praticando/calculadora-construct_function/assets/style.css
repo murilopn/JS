@@ -1,0 +1,43 @@
+:root{
+    --prymary-color: rgb(17, 77, 90); /*assim que se declara variável no css*/
+    --prymary-color-daker: rgb(9, 48, 56);
+}
+    
+body{
+    margin:0;
+    padding:0;
+    background:var(--prymary-color);
+
+}
+
+.container{
+    max-width: 640px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    border-radius: 10px;
+}
+.calculadora{
+    width: 400px;
+}
+.display{
+    width:100%;
+    font-size: 2em;
+    text-align: right;
+}
+
+.btn{
+    width:100%;
+    height: 40px;;
+    font-size: 1em;
+    border:none;
+    background:lightgray;
+    cursor:pointer
+}
+
+.btn:hover{
+    background:#9e9e9e;
+}

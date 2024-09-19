@@ -1,0 +1,1 @@
+Closeures - É a "habilidade" da função de acessar o seu escopo léxico. Resumidamente, o closeure é quem garante que a "lembrança" do escopo léxico das variáveis/função.

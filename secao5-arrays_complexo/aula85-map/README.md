@@ -1,0 +1,1 @@
+Funcionamento semelhante a filter. A Diferença aqui é que ao invés de filtrar o meu array, ele vai mapear e vai retornar o array com alterações, mas o tamanho será o mesmo.

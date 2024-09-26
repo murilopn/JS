@@ -17,7 +17,7 @@ pessoa.sobrenome='nascimento'
 
 para DELETAR eu posso simplesmente chamar o comando delete: delete pessoa.nome
 
-A vantagem das funções estarem denrto do objeto é que temos acesso as chaves do meu objeto dentro desse método. Essa utilização é feita através do "this". A questão é que na hora de chamarmos, ao invés de ser pessoa1.nome, temos que acrescentar um () ao final
+A vantagem das funções estarem dentro do objeto é que temos acesso as chaves da minha classe dentro desse método. Essa utilização é feita através do "this". A questão é que na hora de chamarmos, ao invés de ser pessoa1.nome, temos que acrescentar um () ao final
 
 Vale a pena lembrar que factory e constructor functions são moldes, ou seja, é muito interessante usá-los em inúmeros casos, como por exemplo, hora de cadastrar clientes, uma vez que o "molde" já está pronto. Uma alternativa ao uso dessas funções é a utilização de Classes.  
 

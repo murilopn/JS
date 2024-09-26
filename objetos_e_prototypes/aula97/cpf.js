@@ -1,4 +1,4 @@
-//EXERCÍCIO DE VALIDAÇÃO DE CPF
+//EXERCÍCIO DE VALIDAÇÃO DE CPF (fazendo no seco, do meu jeito)
 //705.484.450
 function Numero(array){
     this.cpf=array.slice(0,-2)

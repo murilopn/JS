@@ -1,0 +1,200 @@
+body, h1, h2, h3, ul, li, p, dd, dt, dl{ /*como vou mexer em tudo, "zerei" as tags*/
+    margin:0 px;
+    padding:0 px;
+}
+img{
+    display: block;
+    max-width: 100%; /*impedindo q a imagem ultrapasse 100% o tamanho do container. Isso faz com que ela se modifique 
+    de acordo com o tamanho da janela*/
+}
+ul{
+    list-style: none; /*tirando as bolinhas do início da lista*/
+}
+
+body{
+    background: #faf6ed;
+    color: #222; /*cor do texto*/
+    -webkit-font-smoothing: antialiased;/*tipografia suave*/
+    display: grid;
+    grid-template-columns:0.5fr 120px minmax(600px,1000px)1fr; /*Estou divindo minha página, meu grid, em 4 colunas: 
+    as duas da ponta com 1 fração*, a da imagem dos animais com 120px e a escrita, a do meio de 300 a 800px, variando de acordo com o 
+    tamanho da janela*/
+}
+.menu{
+    grid-column: 3/5; /*meu menu vai pegar da terceira até o final da 4a coluna, por isso o 5*. Estou pegando do início das imagens até o fim*/
+    margin-top: 2rem; /*rem é uma unidade relativa em pixel, o da tipografia do site, cada rem é mais ou menos 16 pixels*/
+    margin-bottom: 2rem;
+    background-color: #fb5;
+}
+
+.menu ul{
+    display:flex; /*usando flexbox p colocar um do lado do outro (antes estava um em baixo do outro)*/
+    flex-wrap: wrap; /*caso minha janela diminua, eu quebro os itens*/
+    padding:10px;
+}
+
+.menu li a{/*a é referente a ALL*/
+    display: block;
+    padding: 10px; /*aumento a área de click do meu block, ou seja, do nomezinho do item*/
+    margin-right: 10px;
+    color: #222;
+    text-decoration: none;/*tirando o sublinhado*/
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-size:0.875rem;
+    letter-spacing: .1em; /*criando um espaçamento entre cada letra*/
+}
+
+.grid-section{
+   grid-column:2/4;
+   width: 100%;
+   box-sizing: border-box; /*evite que grude na ponta*/
+   padding:10px;
+   display: grid;
+   grid-template-columns: 30    0px 300px 1fr; /*estou separando meu grid em colunas. 50px p título (animais fantásticos)
+   300px p imagem, 1fr p texto (para que possa variar de acordo com o tamanho da janela, o fr faz isso*/
+   grid-gap:20px; /*distância entre cada coluna*/
+   margin-bottom:4rem;
+}
+
+.titulo{
+    grid-column: 1/4;
+    font-display: 'Playfair Display SC', georgia;
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 400; /*Para tirar o bold*/
+    margin-bottom: 1rem;
+}
+
+.animais h2{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 1rem;
+    color: #E54
+}
+.animais h2::before{
+    content:''; /*SEMPRE tem que colocar o content, msm q seja vazio*/
+    display: inline-block; /*para ficar na mesma linha*/
+    width: 40px;
+    height: 10px;
+    margin-right: 10px;
+    background:#fb5;
+}
+.animais p{
+    font-family: Helvetica,Arial;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.animais-lista{
+    height: 500px;
+    overflow-y: scroll; /*o que passar o container estabelecido no eixo y, vai colocar um scroll,
+    ou seja, uma barra de rolagem*/
+    grid-column:2;
+}
+
+.animais-lista::-webkit-scrollbar{
+    width:20px;
+}
+.animais-lista::-webkit-scrollbar-thumb{
+    background: #fb5;
+    border-left:4px solid #faf6ed;
+    border-right:4px solid #faf6ed;
+}
+.animais-lista::-webkit-scrollbar-track{
+    background:#faf6ed 
+}
+
+.animais-descricao{
+    grid-column: 3;
+}
+.animais-descricao{
+    margin-bottom:3rem;
+}
+
+.faq-lista{
+    grid-column: 2/4;
+}
+.faq-lista dt{
+    font-family: 'IBM Plex Mono',monospace;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    color:#E54;
+}
+
+.faq-lista dt::before{
+    content: ''; /*criando uma barrinha antes das perguntas*/
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right:10px;
+    background:#fb5;
+}
+.faq-lista dd{
+    font-family: Helvetica,Arial;
+    margin-bottom:.5 rem;
+    margin-left: 30px;
+}
+
+.mapa{
+    grid-column: 2;
+}
+.dados{
+    grid-column: 3;
+} 
+.dados li {
+    margin-bottom: 1rem;
+    font-family: Helvetica, Arial;
+}
+.dados li::before {
+    content: ''; 
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right:10px;
+    background:#fb5;
+}
+.copy{
+    grid-column: 3/5;
+    margin-bottom: 2rem;
+    background:#fb5;
+}
+
+.copy p{
+    padding:20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+}
+
+@media(max-width:700px){
+    body{
+        grid-template-columns:1fr;
+    }
+    .menu,.grid-section,.copy{
+        grid-column: 1;
+    }
+    .grid-section{
+        grid-template-columns: 100px 1fr;
+        grid-gap:10px;
+
+    }
+    .animais-lista{
+        grid-column: 1;
+    }
+    .faq-lista,.dados,.mapa{
+        grid-column: 1/3;
+    }
+    .grid-section h1{
+        font-size: 3rem;
+    }
+    .menu{
+        margin-top: 0px;
+    }
+    .copy{
+        margin-bottom:0px;
+    }
+}
